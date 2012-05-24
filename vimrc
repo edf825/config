@@ -1,6 +1,8 @@
 set background=light
 
 set cindent
+set cinoptions=(0
+
 set tabstop=2
 set shiftwidth=2
 set expandtab
