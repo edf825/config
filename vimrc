@@ -6,12 +6,10 @@ set shiftwidth=2
 set expandtab
 
 set colorcolumn=80
-
 set number
-
 set laststatus=2
-
 set nohls
+set nowrap
 
 highlight TrailingWhitespace ctermbg=7
 match TrailingWhitespace /\s\+$/
