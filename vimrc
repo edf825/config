@@ -13,5 +13,7 @@ set laststatus=2
 set nohls
 set nowrap
 
+highlight ColorColumn ctermbg=7
+
 highlight TrailingWhitespace ctermbg=7
 match TrailingWhitespace /\s\+$/
