@@ -1,0 +1,7 @@
+mk_add_options MOZ_OBJDIR=/home/me/build/xulrunner
+mk_add_options MOZ_CO_PROJECT=xulrunner
+mk_add_options MOZ_MAKE_FLAGS="-j12 -s"
+
+ac_add_options --enable-application=xulrunner
+ac_add_options --with-ccache=/usr/bin/ccache
+ac_add_options --disable-javaxpcom

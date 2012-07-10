@@ -9,6 +9,21 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
+# Enable GNOME theming stuff
+exec gnome-settings-daemon
+
+# Two finger scrolling
+exec synclient HorizTwoFingerScroll=1
+exec synclient VertTwoFingerScroll=1
+# No idea what these next things do
+exec synclient EmulateTwoFingerMinW=1000
+exec synclient EmulateTwoFingerMinZ=1000
+# Turn off edge scroll
+exec synclient VertEdgeScroll=0
+exec synclient HorizEdgeScroll=0
+# Invert buttons
+exec xinput set-button-map 11 1 2 3 5 4 7 6
+
 set $mod Mod4
 
 # font for window titles. ISO 10646 = Unicode
@@ -156,7 +171,8 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-  tray_output primary
+  tray_output LVDS-0
   status_command i3status
 	position bottom
+  font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 }
