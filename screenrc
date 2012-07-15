@@ -1,0 +1,2 @@
+hardstatus on
+hardstatus string "[screen %n%?: %t%?] %h"
