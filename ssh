@@ -1,3 +1,11 @@
 Host people
   HostName people.mozilla.org
   User eflores
+
+Host hg
+  HostName hg.mozilla.org
+  User eflores@mozilla.com
+
+Host hg.mozilla.org
+  HostName hg.mozilla.org
+  User eflores@mozilla.com

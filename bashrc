@@ -5,7 +5,7 @@ export PATH=$HOME/bin:$HOME/.java/jdk/bin:$PATH:$HOME/android/android-sdk-linux/
 export GECKO_PATH=$HOME/src/gonk-central
 export GECKO_OBJDIR=$HOME/build/gonk
 
-export CCACHE_DIR=$HOME/slow/ccache
+export CCACHE_DIR=$HOME/.ccache
 
 alias ls='ls --color -F'
 
@@ -35,3 +35,6 @@ alias gfind='gfiles | xargs grep $@'
 alias cdiff='diffdir $@ `cfiles`'
 alias hdiff='diffdir $@ `hfiles`'
 alias chdiff='diffdir $@ `chfiles`' 
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

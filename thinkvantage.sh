@@ -27,4 +27,4 @@ elif [ $setup = "Workstation" ]; then
   xrandr --output DP-3 --rotate left --output VGA-0 --rotate right --left-of VGA-0
 fi
 
-notify-send "Setup Changed" $setup
+notify-send -i desktop "Setup Changed" $setup

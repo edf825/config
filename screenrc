@@ -1,2 +1,3 @@
 hardstatus on
 hardstatus string "[screen %n%?: %t%?] %h"
+shell "/bin/zsh"

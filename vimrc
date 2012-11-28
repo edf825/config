@@ -17,3 +17,6 @@ highlight ColorColumn ctermbg=7
 
 highlight TrailingWhitespace ctermbg=7
 match TrailingWhitespace /\s\+$/
+
+highlight TabsAreStupid ctermbg=red
+match TabsAreStupid /\t/

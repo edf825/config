@@ -24,6 +24,9 @@ exec synclient HorizEdgeScroll=0
 # Invert buttons
 exec xinput set-button-map 11 1 2 3 5 4 7 6
 
+# Set wallpaper
+exec nitrogen --restore
+
 set $mod Mod4
 
 # font for window titles. ISO 10646 = Unicode

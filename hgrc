@@ -2,6 +2,7 @@
 mq=
 color=
 crecord=/home/me/.hg/ext/crecord
+qimportbz=/home/me/.hg/ext/qimportbz
 
 [ui]
 username = Edwin Flores <eflores@mozilla.com>
