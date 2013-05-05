@@ -12,17 +12,8 @@
 # Enable GNOME theming stuff
 exec gnome-settings-daemon
 
-# Two finger scrolling
-exec synclient HorizTwoFingerScroll=1
-exec synclient VertTwoFingerScroll=1
-# No idea what these next things do
-exec synclient EmulateTwoFingerMinW=1000
-exec synclient EmulateTwoFingerMinZ=1000
-# Turn off edge scroll
-exec synclient VertEdgeScroll=0
-exec synclient HorizEdgeScroll=0
-# Invert buttons
-exec xinput set-button-map 11 1 2 3 5 4 7 6
+# Custom keybindings
+exec xbindkeys
 
 # Set wallpaper
 exec nitrogen --restore
@@ -175,7 +166,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
   tray_output LVDS-0
-  status_command i3status
+  status_command /home/me/.i3/status.sh
 	position bottom
   font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 }
