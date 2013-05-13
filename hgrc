@@ -1,7 +1,10 @@
 [extensions]
-mq=
 color=
 crecord=/home/me/.hg/ext/crecord
+inotify=
+mq=
+pager=
+progress=
 qimportbz=/home/me/.hg/ext/qimportbz
 
 [ui]
@@ -17,3 +20,7 @@ qnew = -Ue
 
 [paths]
 try = ssh://hg.mozilla.org/try
+inbound = ssh://hg.mozilla.org/integration/mozilla-inbound
+central = ssh://hg.mozilla.org/mozilla-central
+aurora = ssh://hg.mozilla.org/releases/mozilla-aurora
+beta = ssh://hg.mozilla.org/releases/mozilla-beta
