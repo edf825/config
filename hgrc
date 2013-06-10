@@ -24,3 +24,9 @@ inbound = ssh://hg.mozilla.org/integration/mozilla-inbound
 central = ssh://hg.mozilla.org/mozilla-central
 aurora = ssh://hg.mozilla.org/releases/mozilla-aurora
 beta = ssh://hg.mozilla.org/releases/mozilla-beta
+
+[alias]
+try = push -f try
+
+[hooks]
+post-try = hg phase --force --draft "mq()"
