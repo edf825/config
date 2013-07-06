@@ -6,6 +6,7 @@ promptinit
 autoload -U colors
 colors
 PROMPT='%F{blue}%T%f %F{green}%n@%m%f:%F{magenta}%B%~%b%f %# '
+RPROMPT=' %M'
 
 setopt histignorealldups
 
@@ -43,6 +44,10 @@ export CCACHE_DIR=$HOME/.ccache
 
 alias ls='ls --color -F'
 alias go='gnome-open'
+
+alias -s cpp='vim'
+alias -s h='vim'
+alias -s c='vim'
 
 export PATH=$HOME/bin:$HOME/.java/jdk/bin:$PATH:$HOME/android/android-sdk-linux/platform-tools:$HOME/android/android-sdk-linux/tools
 
