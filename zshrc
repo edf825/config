@@ -45,9 +45,9 @@ export CCACHE_DIR=$HOME/.ccache
 alias ls='ls --color -F'
 alias go='gnome-open'
 
-alias -s cpp='vim'
-alias -s h='vim'
-alias -s c='vim'
+alias -s cpp='vim -o'
+alias -s h='vim -o'
+alias -s c='vim -o'
 
 export PATH=$HOME/bin:$HOME/.java/jdk/bin:$PATH:$HOME/android/android-sdk-linux/platform-tools:$HOME/android/android-sdk-linux/tools
 
