@@ -9,16 +9,29 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
+set $mod Mod4
+
 # Enable GNOME theming stuff
 exec gnome-settings-daemon
 
 # Custom keybindings
 exec xbindkeys
 
-# Set wallpaper
-exec nitrogen --restore
+# Start dunst notification daemon
+exec killall notify-osd
+exec dunst
 
-set $mod Mod4
+# Send Thunderbird to its own scratchpad (mod+m for _M_ail)
+for_window [class="^Thunderbird"] move to scratchpad
+bindsym $mod+m [class="^Thunderbird"] scratchpad show, fullscreen
+
+# Send Spotify to its own scratchpad (mod+u for m_U_sic)
+for_window [class="^Spotify$"] move to scratchpad
+bindsym $mod+u [class="^Spotify$"] scratchpad show, fullscreen
+
+# Show terminal scratchpad (mod+i for _I_rc)
+for_window [class="^IRC$"] move to scratchpad
+bindsym $mod+i [class="^IRC$"] scratchpad show, fullscreen
 
 # font for window titles. ISO 10646 = Unicode
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
