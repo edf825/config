@@ -1,3 +1,5 @@
+syntax on
+
 set background=light
 
 set cindent
@@ -12,6 +14,9 @@ set number
 set laststatus=2
 set nohls
 set nowrap
+
+" Look up the directory tree to find a tags file.
+set tags+=tags;/
 
 highlight ColorColumn ctermbg=7
 
@@ -33,3 +38,15 @@ if &term == "screen" || &term == "xterm"
 endif
 
 let &titleold = ""
+
+" Something very weird is happening. Hack around it.
+map <C-@> <Esc>
+map! <C-@> <Esc>
+
+" Set <F12> to find the current word in DXR in Firefox.
+function! SearchDXR(search)
+  let url="gnome-open 'http://dxr.mozilla.org/mozilla-central/search?tree=mozilla-central&redirect=true&q=" . a:search . "' 2>/dev/null"
+  call system(url)
+endfunction
+command! -nargs=1 DXR call SearchDXR(<f-args>)
+map <F12> :DXR <C-R>=expand("<cword>")<CR><CR>
