@@ -3,6 +3,8 @@
 autoload -Uz promptinit
 promptinit
 
+export GREP_OPTIONS='--color=auto'
+
 autoload -U colors
 colors
 PROMPT='%F{blue}%T%f %F{green}%n@%m%f:%F{magenta}%B%~%b%f %# '
@@ -49,7 +51,8 @@ alias -s cpp='vim -o'
 alias -s h='vim -o'
 alias -s c='vim -o'
 
-export PATH=$HOME/bin:$HOME/.java/jdk/bin:$PATH:$HOME/android/android-sdk-linux/platform-tools:$HOME/android/android-sdk-linux/tools
+export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$HOME/android/adt-bundle-linux/sdk/tools:$HOME/android/adt-bundle-linux/sdk/build-tools:$HOME/android/adt-bundle-linux/sdk/platform-tools
 
 setopt extendedglob
 setopt histignorespace
