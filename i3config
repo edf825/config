@@ -33,8 +33,8 @@ bindsym $mod+u [class="^Spotify$"] scratchpad show, fullscreen
 for_window [class="^IRC$"] move to scratchpad
 bindsym $mod+i [class="^IRC$"] scratchpad show, fullscreen
 
-# font for window titles. ISO 10646 = Unicode
-font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+# font for window titles.
+font pango:Ubuntu Bold 9
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -179,7 +179,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
   tray_output LVDS-0
-  status_command /home/me/.i3/status.sh
+  status_command /home/me/bin/i3status.sh
 	position bottom
-  font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+  font pango:Inconsolata 9
 }
