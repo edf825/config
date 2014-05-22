@@ -5,7 +5,8 @@ inotify=
 mq=
 pager=
 progress=
-qimportbz=/home/me/.hg/ext/qimportbz
+qimportbz=/home/me/.hg/ext/version-control-tools/hgext/qimportbz
+bzexport=/home/me/.hg/ext/version-control-tools/hgext/bzexport
 
 [ui]
 username = Edwin Flores <eflores@mozilla.com>
@@ -30,3 +31,10 @@ try = push -f try
 
 [hooks]
 post-try = hg phase --force --draft "mq()"
+
+[color]
+# need this because solarized has a dark blue background
+qseries.unapplied = none
+
+[bzexport]
+username = edwin@mozilla.com
