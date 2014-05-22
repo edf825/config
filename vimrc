@@ -43,10 +43,10 @@ let &titleold = ""
 map <C-@> <Esc>
 map! <C-@> <Esc>
 
-" Set <F12> to find the current word in DXR in Firefox.
+" Set <Leader>d to find the current word in DXR in Firefox.
 function! SearchDXR(search)
   let url="gnome-open 'http://dxr.mozilla.org/mozilla-central/search?tree=mozilla-central&case=true&q=" . a:search . "' 2>/dev/null"
   call system(url)
 endfunction
 command! -nargs=1 DXR call SearchDXR(<f-args>)
-map <F12> :DXR <C-R>=expand("<cword>")<CR><CR>
+map <Leader>d :DXR <C-R>=expand("<cword>")<CR><CR>
