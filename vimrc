@@ -15,6 +15,11 @@ set laststatus=2
 set nohls
 set nowrap
 
+set relativenumber
+
+" Let + register be the X clipboard
+set clipboard=unnamedplus
+
 " Look up the directory tree to find a tags file.
 set tags+=tags;/
 
