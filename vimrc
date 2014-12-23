@@ -17,6 +17,8 @@ set nowrap
 
 set relativenumber
 
+let mapleader=","
+
 " Let + register be the X clipboard
 set clipboard=unnamedplus
 
@@ -55,3 +57,6 @@ function! SearchDXR(search)
 endfunction
 command! -nargs=1 DXR call SearchDXR(<f-args>)
 map <Leader>d :DXR <C-R>=expand("<cword>")<CR><CR>
+
+" Highlighting for lesser-known file extensions
+au BufRead,BufNewFile *.jsm setfiletype javascript
