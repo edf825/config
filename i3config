@@ -17,6 +17,9 @@ exec gnome-settings-daemon
 # Custom keybindings
 exec setxkbmap -option caps:escape
 
+# Start compton compositor to mitigate white flash when changing workspaces.
+exec compton -CGb
+
 # Start dunst notification daemon
 exec killall notify-osd
 exec dunst
