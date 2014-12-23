@@ -15,7 +15,7 @@ set $mod Mod4
 exec gnome-settings-daemon
 
 # Custom keybindings
-exec xbindkeys
+exec setxkbmap -option caps:escape
 
 # Start dunst notification daemon
 exec killall notify-osd
@@ -23,15 +23,15 @@ exec dunst
 
 # Send Thunderbird to its own scratchpad (mod+m for _M_ail)
 for_window [class="^Thunderbird"] move to scratchpad
-bindsym $mod+m [class="^Thunderbird"] scratchpad show, fullscreen
+bindsym $mod+m [class="^Thunderbird"] fullscreen, scratchpad show
 
 # Send Spotify to its own scratchpad (mod+u for m_U_sic)
 for_window [class="^Spotify$"] move to scratchpad
-bindsym $mod+u [class="^Spotify$"] scratchpad show, fullscreen
+bindsym $mod+u [class="^Spotify$"] fullscreen, scratchpad show
 
 # Show terminal scratchpad (mod+i for _I_rc)
 for_window [class="^IRC$"] move to scratchpad
-bindsym $mod+i [class="^IRC$"] scratchpad show, fullscreen
+bindsym $mod+i [class="^IRC$"] fullscreen, scratchpad show
 
 # font for window titles.
 font pango:Ubuntu Bold 9
@@ -178,7 +178,7 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-  tray_output LVDS-0
+  tray_output eDP1
   status_command /home/me/bin/i3status.sh
 	position bottom
   font pango:Inconsolata 9
